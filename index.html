@@ -66,14 +66,14 @@
 				<!-- Work -->
 				<article id="work">
 					<h2 class="major">Projects</h2>
-					<span class="image main"><img src="images/pic02.png" alt="" /></span>
+					<!--<img src="images/pic02.png" alt="" style="max-width:300px; margin:auto; display:block;" /> -->
 
 					<p>Select a project to view details, screenshots, and what I implemented.</p>
 
 					<ul class="alt">
 						<li>
-							<strong><a href="#proj-recruitment">Recruitment App (JR)</a></strong><br />
-							Custom objects + application tracking (junction) + stages + reporting.
+							<strong><a href="#proj-publicGroup">Public Group Management</a></strong><br />
+							Screen Flow to manage public group members.
 						</li>
 						<li>
 							<strong><a href="#proj-lead-conversion">Lead Conversion Demo</a></strong><br />
@@ -91,32 +91,34 @@
 				</article>
 
 				<!-- Project: Recruitment App -->
-				<article id="proj-recruitment">
-					<h2 class="major">Recruitment App (JR)</h2>
-
-					<p>
-						A Salesforce app to support recruiters managing clients, job roles, candidates, applications, and interview stages.
-					</p>
-
+				<article id="proj-publicGroup">
+					<h2 class="major">Public Group</h2>
 					<h3>Problem</h3>
 					<p>
-						Recruiters needed a structured way to track candidates applying to jobs and move them through consistent stages
-						while keeping reporting accurate.
+						Salesforce’s native permission model blocks project managers from adding or removing users from project public groups, creating unnecessary admin dependency.
+					</p>
+					<h3>Solution</h3>
+					<p>
+						Run as a System-context screen flow.
+					<span class="image main"><img src="images/TeamStart.png" alt="First Screen" /></span>
+					<span class="image main"><img src="images/TeamGroup.png" alt="Manage Group listview" /></span>
+					<span class="image main"><img src="images/TeamLast.png" alt="Confirm" /></span>
+					<span class="image main"><img src="images/flowPublicGroup.png" alt="Flow" /></span>
 					</p>
 
 					<h3>Solution</h3>
 					<ul>
-						<li>Built a data model for Clients, Jobs, Candidates, and Applications.</li>
-						<li>Created <strong>Application</strong> as a junction object linking Candidate ↔ Job Position.</li>
-						<li>Implemented application stages (1st interview, 2nd interview, assessment centre, final, offer, accepted, rejected).</li>
+						<li>Used GroupMember as the junction object to add and remove members by GroupMember.Id instead of User.</li>
+						<li>Transformed record collections into text collections to support efficient IN (Public Group)and NOT IN queries.</li>
+						<li>Validated that users were selected before processing.</li>
 						<li>Configured related lists + list views to make day-to-day tracking easy.</li>
-						<li>Added reporting foundations (e.g., accepted applications per month, jobs/applications by client).</li>
+						<li>Only added or removed GroupMembers after an explicit confirmation step to prevent accidental changes.</li>
 					</ul>
 
-					<h3>Screenshots (add yours)</h3>
+					<!--<h3>Screenshots (add yours)</h3>
 					<p>Replace these image files with your real screenshots (same filenames), or change the filenames below.</p>
-					<span class="image main"><img src="images/jr-data-model.jpg" alt="JR data model screenshot" /></span>
-					<span class="image main"><img src="images/jr-application-stages.jpg" alt="JR application stages screenshot" /></span>
+					<span class="image main"><img src="images/TeamGroup.png" alt="JR data model screenshot" /></span>
+					<span class="image main"><img src="images/jr-application-stages.jpg" alt="JR application stages screenshot" /></span>-->
 
 					<p><a href="#work">Back to Projects</a></p>
 				</article>
