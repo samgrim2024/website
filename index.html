@@ -26,18 +26,20 @@
 				<div class="logo">
 					<span class="icon fa-gem"></span>
 				</div>
+
 				<div class="content">
 					<div class="inner">
 						<h1>Samanta</h1>
-						<p>Salesforce-obsessed.</p>
+						<h2>Salesforce-obsessed.</h2>
 					</div>
 				</div>
+
 				<nav>
 					<ul>
 						<li><a href="#intro">Intro</a></li>
-						<li><a href="#work">Projects</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a href="#work">Flows</a></li>
+						<li><a href="#agentforce">Agentforce</a></li>
+						<li><a href="#lwc">LWC</a></li>
 						<!-- <li><a href="#elements">Elements</a></li> -->
 					</ul>
 				</nav>
@@ -49,105 +51,111 @@
 				<!-- Intro -->
 				<article id="intro">
 					<h2 class="major">Intro</h2>
-					<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+					<span class="image main"><img src="images/pic01.jpg" alt="Intro image" /></span>
 
 					<p>
-						I build Salesforce solutions that improve process consistency, automate manual steps, and make reporting reliable.
-						This portfolio highlights a few projects where I designed objects, flows, and reporting to match real business workflows.
-						You can view my <a href="#work">Projects</a> to see detailed write-ups and screenshots.
+						I’ve been part of the Salesforce ecosystem for just over a year, and I love it. 
+						Salesforce has become my work, my hobby, and—my friend. 
+						My mindset is that the sky is the limit, let's go!
 					</p>
 
 					<p>
-						Areas I focus on: Screen Flows, record-triggered automation, data modelling (including junction objects),
-						record types/paths, and reports & dashboards.
+						I have been spending my weekends and after work continuously 
+						studying/experimenting/challenging myself,
+						because I want to go up, and I want to do it fast 🤣
 					</p>
+						I have been using AI and we need to embrace this tool - I can build any idea that comes to mind - 
+						how science-fiction is that?
+						Have a look at my LWC tasks, very complex developer solutions done in a day.
+						This does fascinate me!
+					<p>
+						
+					</p>
+
+					<p><a href="#work">View Flows</a></p>
 				</article>
 
-				<!-- Work -->
+				<!-- Flows overview -->
 				<article id="work">
-					<h2 class="major">Projects</h2>
-					<!--<img src="images/pic02.png" alt="" style="max-width:300px; margin:auto; display:block;" /> -->
+					<h2 class="major">Flows</h2>
 
-					<p>Select a project to view details, screenshots, and what I implemented.</p>
+					<p>Select a project to view details and screenshots.</p>
 
 					<ul class="alt">
 						<li>
-							<strong><a href="#proj-publicGroup">Public Group Management</a></strong><br />
+							<a href="#proj-publicGroup">Public Group Management</a><br />
 							Screen Flow to manage public group members.
 						</li>
 						<li>
-							<strong><a href="#proj-lead-conversion">Lead Conversion Demo</a></strong><br />
+							<a href="#proj-lead-conversion">Lead Conversion Demo</a><br />
 							End-to-end lifecycle: Lead → Account/Contact/Opportunity, with duplicate checks.
 						</li>
 						<li>
-							<strong><a href="#proj-flow-automation">Flow Automation: Product Filtering</a></strong><br />
+							<a href="#proj-flow-automation">Flow Automation: Product Filtering</a><br />
 							Simplified a complex flow using data-driven filtering (checkbox on Product2).
 						</li>
 					</ul>
 
-					<p>
-						Want something specific? Go to <a href="#contact">Contact</a> and message me.
-					</p>
+					<p><a href="#agentforce">Go to Agentforce</a></p>
 				</article>
 
-				<!-- Project: Recruitment App -->
+				<!-- Flow project: Public Group -->
 				<article id="proj-publicGroup">
-					<h2 class="major">Public Group</h2>
+					<h2 class="major">Public Group Management</h2>
+
 					<h3>Problem</h3>
 					<p>
-						Salesforce’s native permission model blocks project managers from adding or removing users from project public groups, creating unnecessary admin dependency.
+						Salesforce’s native permission model blocks project managers from adding or removing users from project public groups,
+						creating unnecessary admin dependency.
 					</p>
+
 					<h3>Solution</h3>
 					<p>
-						Run as a System-context screen flow.
-					<span class="image main"><img src="images/TeamStart.png" alt="First Screen" /></span>
-					<span class="image main"><img src="images/TeamGroup.png" alt="Manage Group listview" /></span>
-					<span class="image main"><img src="images/TeamLast.png" alt="Confirm" /></span>
-					<span class="image main"><img src="images/flowPublicGroup.png" alt="Flow" /></span>
+						A system-context screen flow that lets approved users add or remove public group members safely.
 					</p>
 
-					<h3>Solution</h3>
+					<h3>Screenshots</h3>
+					<span class="image main"><img src="images/TeamStart.png" alt="Flow first screen" /></span>
+					<span class="image main"><img src="images/TeamGroup.png" alt="Manage group list" /></span>
+					<span class="image main"><img src="images/TeamLast.png" alt="Confirmation screen" /></span>
+					<span class="image main"><img src="images/flowPublicGroup.png" alt="Flow diagram" /></span>
+
+					<h3>Key points</h3>
 					<ul>
-						<li>Used GroupMember as the junction object to add and remove members by GroupMember.Id instead of User.</li>
-						<li>Transformed record collections into text collections to support efficient IN (Public Group)and NOT IN queries.</li>
+						<li>Used GroupMember as the junction object to add and remove members by GroupMember.Id.</li>
+						<li>Converted record collections into text collections to support efficient IN and NOT IN filtering.</li>
 						<li>Validated that users were selected before processing.</li>
-						<li>Configured related lists + list views to make day-to-day tracking easy.</li>
-						<li>Only added or removed GroupMembers after an explicit confirmation step to prevent accidental changes.</li>
+						<li>Added a confirmation step to prevent accidental changes.</li>
 					</ul>
 
-					<!--<h3>Screenshots (add yours)</h3>
-					<p>Replace these image files with your real screenshots (same filenames), or change the filenames below.</p>
-					<span class="image main"><img src="images/TeamGroup.png" alt="JR data model screenshot" /></span>
-					<span class="image main"><img src="images/jr-application-stages.jpg" alt="JR application stages screenshot" /></span>-->
-
-					<p><a href="#work">Back to Projects</a></p>
+					<p><a href="#work">Back to Flows</a></p>
 				</article>
 
-				<!-- Project: Lead Conversion -->
+				<!-- Flow project: Lead Conversion -->
 				<article id="proj-lead-conversion">
 					<h2 class="major">Lead Conversion Demo</h2>
 
 					<p>
 						A demo build to understand and showcase how Salesforce converts Leads into Accounts, Contacts, and Opportunities,
-						including matching/duplicate behaviour.
+						including matching and duplicate behaviour.
 					</p>
 
 					<h3>What I built</h3>
 					<ul>
-						<li>Created a clear conversion flow from lead qualification to conversion outputs.</li>
+						<li>Clear qualification path from Lead to conversion outputs.</li>
 						<li>Tested scenarios where Salesforce detects existing Accounts/Contacts during conversion.</li>
-						<li>Documented edge cases and the “why” behind each setup decision.</li>
+						<li>Documented edge cases and setup decisions.</li>
 					</ul>
 
-					<h3>Screenshots (add yours)</h3>
+					<h3>Screenshots</h3>
 					<span class="image main"><img src="images/lead-conversion-1.jpg" alt="Lead conversion screenshot" /></span>
 
-					<p><a href="#work">Back to Projects</a></p>
+					<p><a href="#work">Back to Flows</a></p>
 				</article>
 
-				<!-- Project: Flow Automation -->
+				<!-- Flow project: Product Filtering -->
 				<article id="proj-flow-automation">
-					<h2 class="major">Flow Automation</h2>
+					<h2 class="major">Flow Automation: Product Filtering</h2>
 
 					<p>
 						A refactor of a complex screen flow to reduce decision logic and make behaviour data-driven and easier to maintain.
@@ -155,42 +163,92 @@
 
 					<h3>What I improved</h3>
 					<ul>
-						<li>Simplified product selection by filtering using a checkbox on <strong>Product2</strong> (data-driven).</li>
-						<li>Reduced branching/decision complexity by relying on record data instead of hard-coded logic.</li>
-						<li>Worked with loop + assignments patterns for scalable screen input handling.</li>
+						<li>Filtered selectable products using a checkbox on Product2.</li>
+						<li>Reduced branching by relying on record data instead of hard-coded decisions.</li>
+						<li>Used loop + assignments patterns for scalable input handling.</li>
 					</ul>
 
-					<h3>Screenshots (add yours)</h3>
+					<h3>Screenshots</h3>
 					<span class="image main"><img src="images/flow-product-filtering.jpg" alt="Flow product filtering screenshot" /></span>
 
-					<p><a href="#work">Back to Projects</a></p>
+					<p><a href="#work">Back to Flows</a></p>
 				</article>
 
-				<!-- About -->
-				<article id="about">
-					<h2 class="major">About</h2>
-					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<!-- Agentforce overview -->
+				<article id="agentforce">
+					<h2 class="major">Agentforce</h2>
+
+	
+
+					<!--<h3>Agentforce work</h3>-->
+					<ul class="alt">
+						<li><a href="#agent-demo">Agentforce DEMO</a></li>
+						<li><a href="#agent-setup">Setup and overview</a></li>
+						<li><a href="#agent-training">Training session and exam notes</a></li>
+						
+					</ul>
+
+
+					<p><a href="#lwc">Go to LWC</a></p>
+				</article>
+
+				<!-- Agentforce subpage: Setup -->
+				<article id="agent-setup">
+					<h2 class="major">Agentforce setup and overview</h2>
 
 					<p>
-						I’m focused on building Salesforce solutions that are easy to use and easy to report on.
-						My strengths are data modelling, automation design (especially Flow), and turning messy processes into clear stages.
+						Add a short summary of what you set up and how you structured the overview for others.
 					</p>
 
-					<h3>Core skills</h3>
-					<ul>
-						<li>Flows: Screen Flows, record-triggered automation patterns</li>
-						<li>Data model: relationships, junction objects, field design</li>
-						<li>Reporting: dashboards, trends, process visibility</li>
-						<li>Delivery: clean requirements → build → test → iterate</li>
-					</ul>
+					<p><a href="#agentforce">Back to Agentforce</a></p>
+				</article>
+
+				<!-- Agentforce subpage: Training -->
+				<article id="agent-demo">
+					<h2 class="major">My Presentation</h2>
+
+					
+					<p>
+						I ran an Agentforce training session for my colleagues and created a presentation to explain what Agentforce is.
+					</p>
+					<p>The PowerPoint is around 100 slides and focuses on the topics people need to understand quickly for the exam.</p>	
+						<a href="images/AgentDEMO.pdf" target="_blank">View the PDF Here</a>.
+					</p>
+					<h3>Some Sample slides</h3>
+					<span class="image main"><img src="images/demo1.png" alt="Agentforce slide demo 1" /></span>
+					<span class="image main"><img src="images/demo2.png" alt="Agentforce slide demo 2" /></span>
+					<span class="image main"><img src="images/demo3.png" alt="Agentforce slide demo 3" /></span>
+					<span class="image main"><img src="images/demo4.png" alt="Agentforce slide demo 4" /></span>
+
+					<p><a href="#agentforce">Back to Agentforce</a></p>
+				</article>
+
+				<!-- Agentforce subpage: Demo -->
+				<article id="agent-demo">
+					<h2 class="major">Demo build and examples</h2>
+
+					<p>
+						Add a short summary of your demo build and what it demonstrated.
+					</p>
+
+					<p><a href="#agentforce">Back to Agentforce</a></p>
+				</article>
+
+				<!-- LWC -->
+				<article id="lwc">
+					<h2 class="major">LWC</h2>
+
+					<p>
+						Add your LWC work here. For example: a custom component that shows related records, supports multi-select, and launches a screen flow.
+					</p>
+
+					<p><a href="#contact">Contact</a></p>
 				</article>
 
 				<!-- Contact -->
 				<article id="contact">
 					<h2 class="major">Contact</h2>
 
-					<!-- NOTE: This form does not send anywhere unless you add a backend service.
-						 Common free/cheap options: Formspree, Netlify Forms (if hosted on Netlify), etc. -->
 					<form method="post" action="#">
 						<div class="fields">
 							<div class="field half">
@@ -213,17 +271,10 @@
 					</form>
 
 					<ul class="icons">
-						<!-- Replace # with your real links, or delete what you don't want -->
 						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 					</ul>
 				</article>
-
-				<!-- Elements (optional template section kept commented out)
-				<article id="elements">
-					<h2 class="major">Elements</h2>
-				</article>
-				-->
 
 			</div>
 
