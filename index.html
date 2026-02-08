@@ -41,7 +41,7 @@
             <li><a href="#work">Flows</a></li>
             <li><a href="#agentforce">Agentforce</a></li>
             <li><a href="#lwc">LWC</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#event">Event Notes</a></li>
           </ul>
         </nav>
       </header>
@@ -55,8 +55,8 @@
           <span class="image main"><img src="images/pic01.jpg" alt="Intro image" /></span>
 
           <p>
-            I’ve been part of the Salesforce ecosystem for just over a year, and I love it.
-            Salesforce has become my work, my hobby, and—my friend.
+            I’ve been part of the Salesforce ecosystem for a year, and I love it.
+            Salesforce has become my work, my hobby, and my full-time friend 🤣.
             My mindset is that the sky is the limit, let's go!
           </p>
 
@@ -71,8 +71,14 @@
             Have a look at my LWC tasks: complex developer solutions done in a day.
             This does fascinate me!
           </p>
+          <p>
+            Even though I enjoy working at my current company, their approach to working in the 
+            office doesn’t fully align with how I do my best work. I’m looking for a company 
+            that understands 
+            flexibility isn’t one-size-fits-all and values trust and outcomes over location.
+          </p>
 
-          <p><a href="#work">View Flows</a></p>
+          <p><a href="#lwc1">View LWC</a></p>
         </article>
 
         <!-- Flows overview -->
@@ -259,25 +265,81 @@
 		 <article id="lwc">
           <h2 class="major">LWC</h2>
 		  <ul class="alt">
-            <li><a href="#lwc1">LWC1</a></li>
-            <li><a href="#lwc2">LWC2</a></li>
+            <li><a href="#lwc1">Excel View Template and Tracker</a></li>
+            <li><a href="#lwc2">Finance Review Tracker</a></li>
           </ul>
 		  </article>
-		  <article id="lwc1"
-          <h3>What I built</h3>
-          <p>
-            Add your LWC story here (what problem it solved, what it does, and what’s impressive about it).
-          </p>
+		  <article id="lwc1">
 
-          <h3>Repo / links</h3>
+          <h3>Problem</h3>
           <p>
-            Add GitHub links, screenshots, and short bullet points.
+            The customer wants an Excel-style editable view to update Activity records 
+            (grandchildren of the parent Project). Salesforce’s
+             native UI does not support spreadsheet-style inline editing across related records.
           </p>
+          <h3>Schema</h3>
+          <span class="image main"><img src="images/Schema.png" alt="Schema" /></span>
+          <h3>Solution</h3>
+          <p>
+            A LWC Template and LWC Tracker
+          </p>
+          <h3>Template</h3>
+          <p>
+            Users can Build a custom template per project.
+          </p>
+          <span class="image main"><img src="images/templateMain.png" alt="Template" /></span>
+          <p>
+            The template allows users to add any fields 
+            from the Activities and arrange both the fields and activities in any order.
+          </p>
+          <span class="image main"><img src="images/templateFields.png" alt="Template" /></span>
+          <h3>Tracker</h3>
+          <p>
+            Once they are happy with a template, tracker is updated, and Users 
+            can edit the fields in bulk across different installations.
+          </p>
+          <span class="image main"><img src="images/tracker.png" alt="Tracker" /></span>
+          <p>
+            Or edit individual values across multiple cells, including across different fields.
+          </p>
+          <span class="image main"><img src="images/fields.png" alt="Fields" /></span>
 
-          <p><a href="#contact">Contact</a></p>
+
+
+          <p><a href="#lwc2">LWC Finance Review</a></p>
+      </article>
+
+          <article id="lwc2">
+
+          <h3>Problem</h3>
+          <p>
+            The customer wants to be able to edit the most recent Initial and Interim Finance reviews
+             across different installations. 
+          </p>
+          <h3>Solution</h3>
+          <p>A custom LWC that shows the latest finance reviews per installation in one view,
+           with filters and inline editing.
+
+          <span class="image main"><img src="images/finance.png" alt="Finance Tracker" /></span>
+        
+          <p>
+            A LWC Template and LWC Tracker
+          </p>
+          
+          <span class="image main"><img src="images/finance2.png" alt="Finance Tracker bulk edit" /></span>
+         
+
         </article>
+        <article id="event">
+          <h2 class="major">Event Notes</h2>
 
-        <!-- Contact -->
+          <h3>Salesforce World Tour</h3>
+          <p>I’ve attended two Salesforce events so far. I am a fan! 
+            I created a pdf for my colleagues who couldn't attend. They missed out!
+          </p>
+          <a href="images/WT.pdf" target="_blank" rel="noopener noreferrer">View the 2025 Wourld Tour PDF Here</a>.
+
+        <!-- Contact 
         <article id="contact">
           <h2 class="major">Contact</h2>
 
@@ -310,15 +372,15 @@
             <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
           </ul>
 
-          <p><a href="#intro">Back to top</a></p>
+          <p><a href="#intro">Back to top</a></p>-->
         </article>
 
       </div>
 
-      <!-- Footer -->
+      <!-- Footer 
       <footer id="footer">
         <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-      </footer>
+      </footer>-->
 
     </div>
 
